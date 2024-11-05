@@ -127,6 +127,11 @@ nav {
 	object-fit: cover;
 }
 
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
 @media (max-width: 968px) {
 	.hero {
 		flex-direction: column;

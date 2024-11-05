@@ -164,6 +164,7 @@ nav {
 	line-height: 1.6;
 }
 
+
 @media (max-width: 968px) {
 	.timeline-container {
 		grid-template-columns: 1fr;
