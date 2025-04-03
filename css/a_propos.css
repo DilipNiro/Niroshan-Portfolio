@@ -1,0 +1,194 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+:root {
+	--primary-color: #ff6b6b;
+	--background-color: #0a0a0a;
+	--text-color: white;
+	--text-secondary: #888;
+	--card-background: #111111;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+nav {
+	padding: 1.5rem 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	color: var(--primary-color);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+	color: var(--primary-color);
+}
+
+/* Section À propos */
+.about-section {
+	padding: 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.highlight {
+	color: var(--primary-color);
+}
+
+/* Ajoutez ces styles à votre fichier a_propos.css */
+
+.timeline-content ul {
+    list-style-type: none;
+    margin-top: 0.5rem;
+}
+
+.timeline-content li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.timeline-content li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Assurez-vous que les liens dans la timeline sont bien visibles */
+.timeline-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-content a:hover {
+    opacity: 0.8;
+}
+.timeline-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+	margin-top: 3rem;
+}
+
+.timeline {
+	background-color: var(--card-background);
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+	color: var(--primary-color);
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.timeline-item {
+	position: relative;
+	padding-left: 2rem;
+	padding-bottom: 2rem;
+	border-left: 2px solid var(--primary-color);
+}
+
+.timeline-item:last-child {
+	padding-bottom: 0;
+}
+
+.timeline-item::before {
+	content: '';
+	position: absolute;
+	left: -0.5rem;
+	top: 0;
+	width: 1rem;
+	height: 1rem;
+	background-color: var(--primary-color);
+	border-radius: 50%;
+}
+
+.timeline-date {
+	color: var(--primary-color);
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+	background-color: rgba(255, 107, 107, 0.1);
+	padding: 1rem;
+	border-radius: 5px;
+	margin-left: 1rem;
+}
+
+.timeline-content h3 {
+	color: var(--text-color);
+	margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+	color: var(--text-secondary);
+	line-height: 1.6;
+}
+
+
+@media (max-width: 968px) {
+	.timeline-container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.about-section {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	nav {
+		padding: 1rem;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.nav-links {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
